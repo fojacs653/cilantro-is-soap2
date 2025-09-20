@@ -1,0 +1,47 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;      /* slate-900 */
+  --muted:#475569;    /* slate-600 */
+  --surface:#ffffff;
+  --border:#e5e7eb;   /* slate-200 */
+  --accent:#ff7a1a;   /* forge orange for buttons */
+}
+html,body{height:100%;}
+body{
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+  margin:0;
+}
+.container{max-width:1000px; padding:24px; margin: 0 auto;}
+.muted{color:var(--muted)}
+
+/* Gradient text utility for hero */
+.accent-text{
+  background: linear-gradient(90deg, #7c3aed, #ec4899, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft gradient backdrop behind hero */
+.hero-backdrop{ position: relative; overflow: hidden; }
+.hero-backdrop::before{
+  content:''; position:absolute; inset:-120px -20vw 0 -20vw;
+  background:
+    radial-gradient(600px circle at 50% -10%, rgba(124,58,237,0.12), transparent 60%),
+    radial-gradient(500px circle at 90% 0%, rgba(236,72,153,0.10), transparent 60%),
+    radial-gradient(600px circle at 10% 10%, rgba(249,115,22,0.08), transparent 60%);
+  pointer-events:none; z-index:-1;
+}
+
+/* Inputs */
+input,textarea{
+  background:#fff; color:var(--fg); border:1px solid var(--border);
+  border-radius:10px; padding:10px; width:100%;
+}
