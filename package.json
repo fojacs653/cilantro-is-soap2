@@ -15,6 +15,7 @@
     "stripe": "16.4.0",
     "zod": "3.23.8",
     "openai": "4.56.0"
+    "clsx": "2.1.1"
   },
   "devDependencies": {
     "typescript": "5.4.5",
