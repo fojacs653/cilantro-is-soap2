@@ -12,10 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }){
   return (
     <html lang="en" className={sora.variable}>
       <body className={inter.className}>
-        <header style={{borderBottom:'1px solid #1e1e2a'}}>
+        <header style={{borderBottom:'1px solid var(--border)', background:'#fff'}}>
           <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-            <Link href="/" style={{textDecoration:'none', color:'#eaeaf2', display:'flex', alignItems:'center', gap:8}}>
-              <span style={{width:10,height:10,background:'var(--accent)',display:'inline-block',borderRadius:2}} />
+            <Link href="/" style={{textDecoration:'none', color:'var(--fg)', display:'flex', alignItems:'center', gap:8}}>
+              <span style={{width:10,height:10,background:'linear-gradient(90deg,#7c3aed,#ec4899,#f97316)',display:'inline-block',borderRadius:2}} />
               <b style={{letterSpacing:0.2, fontFamily:'var(--font-display)'}}>ReelForge</b>
             </Link>
             <nav style={{display:'flex', gap:12}}>
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }){
           </div>
         </header>
         <main className="container">{children}</main>
-        <footer style={{borderTop:'1px solid #1e1e2a', marginTop:40}}>
+        <footer style={{borderTop:'1px solid var(--border)', marginTop:40, background:'#fff'}}>
           <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center', padding:'16px 24px'}}>
             <div className="muted">© {new Date().getFullYear()} ReelForge</div>
             <div className="muted">Retention Engine™ built‑in</div>
